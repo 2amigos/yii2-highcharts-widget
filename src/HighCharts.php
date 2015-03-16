@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2014 2amigOS! Consulting Group LLC
+ * @copyright Copyright (c) 2013-2015 2amigOS! Consulting Group LLC
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
@@ -52,11 +52,16 @@ class HighCharts extends Widget
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
-        $this->clientOptions = ArrayHelper::merge(['exporting' => [
-            'enabled' => true
-        ]], $this->clientOptions);
+        $this->clientOptions = ArrayHelper::merge(
+            [
+                'exporting' => [
+                    'enabled' => true
+                ]
+            ],
+            $this->clientOptions
+        );
 
-        if(ArrayHelper::getValue($this->clientOptions, 'exporting.enabled')) {
+        if (ArrayHelper::getValue($this->clientOptions, 'exporting.enabled')) {
             $this->modules[] = 'exporting.js';
         }
 
@@ -86,11 +91,11 @@ class HighCharts extends Widget
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
-        foreach($this->modules as $module) {
+        foreach ($this->modules as $module) {
             $bundle->js[] = "modules/{$module}";
         }
 
-        if($theme = ArrayHelper::getValue($options, 'theme')) {
+        if ($theme = ArrayHelper::getValue($options, 'theme')) {
             $bundle->js[] = "themes/{$theme}.js";
         }
 
@@ -98,4 +103,4 @@ class HighCharts extends Widget
 
         $view->registerJs(";var highChart_{$id} = new Highcharts.Chart({$options});");
     }
-} 
+}

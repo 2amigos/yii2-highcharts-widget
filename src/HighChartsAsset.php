@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2014 2amigOS! Consulting Group LLC
+ * @copyright Copyright (c) 2013-2015 2amigOS! Consulting Group LLC
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
@@ -18,14 +18,14 @@ use yii\web\AssetBundle;
  */
 class HighChartsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/2amigos/yii2-highcharts-widget/assets/vendor';
-
-    public $js = [
-        'highcharts.js'
-    ];
+    public $sourcePath = '@vendor/bower/highcharts-release/';
 
     public $depends = [
         'yii\web\JqueryAsset',
     ];
 
-} 
+    public function init()
+    {
+        $this->js[] = YII_DEBUG ? 'highcharts.src.js' : 'highcharts.js';
+    }
+}
