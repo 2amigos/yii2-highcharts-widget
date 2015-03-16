@@ -1,14 +1,18 @@
 {
     "name": "2amigos/yii2-highcharts-widget",
     "description": "Highcharts JS widget for Yii2.",
+    "type": "yii2-extension",
     "keywords": [
+        "2amigos",
         "yii",
+        "yii2",
+        "yii 2",
         "extension",
         "widget",
         "chart",
         "highcharts"
     ],
-    "type": "yii2-extension",
+    "homepage": "http://yiiwheels.com/extension/highcharts-widget",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -18,22 +22,21 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/2amigos/yii2-highcharts-widget/issues",
+        "source": "https://github.com/2amigos/yii2-highcharts-widget"
+    },
     "require": {
-        "php": ">=5.4.0",
         "yiisoft/yii2": "*",
         "bower-asset/highcharts-release": "4.1.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "4.*"
+        "phpunit/phpunit": "4.*",
+        "scrutinizer/ocular": "~1.1"
     },
     "autoload": {
         "psr-4": {
             "dosamigos\\highcharts\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "dosamigos\\highcharts\\tests\\": "tests"
         }
     },
     "extra": {
