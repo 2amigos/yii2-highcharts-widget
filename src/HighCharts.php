@@ -91,6 +91,10 @@ class HighCharts extends Widget
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
+        if (ArrayHelper::getValue($options, 'chart.options3d.enabled')) {
+            $bundle->js[] = YII_DEBUG ? 'highcharts-3d.src.js' : 'highcharts-3d.js';
+        }
+
         foreach ($this->modules as $module) {
             $bundle->js[] = "modules/{$module}";
         }
