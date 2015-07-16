@@ -33,6 +33,14 @@ class HighCharts extends Widget
      */
     public $clientOptions = [];
     /**
+     * @var bool Set to true to enable 3D support.
+     */
+    public $enable3d = false;
+    /**
+     * @var bool Set to true to enable support for more chart types.
+     */
+    public $enableMore = false;
+    /**
      * @var array the modules to register. The modules need to point to the name of the modules available under
      * @vendor/2amigos/yii2-highcharts-widget/assets/vendor/modules. Only the filename (ie `drilldown.js`) that is very
      * important.
@@ -91,6 +99,14 @@ class HighCharts extends Widget
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
+        if ($this->enable3d) {
+            $bundle->js[] = YII_DEBUG ? 'highcharts-3d.src.js' : 'highcharts-3d.js';
+        }
+
+        if ($this->enableMore) {
+            $bundle->js[] = YII_DEBUG ? 'highcharts-more.src.js' : 'highcharts-more.js';
+        }
+        
         foreach ($this->modules as $module) {
             $bundle->js[] = "modules/{$module}";
         }
