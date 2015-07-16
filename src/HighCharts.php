@@ -91,6 +91,10 @@ class HighCharts extends Widget
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
+        if (in_array(ArrayHelper::getValue($options, 'chart.type'), ['gauge', 'solidgauge'])) {
+            $bundle->js[] = YII_DEBUG ? 'highcharts-more.src.js' : 'highcharts-more.js';
+        }
+
         foreach ($this->modules as $module) {
             $bundle->js[] = "modules/{$module}";
         }
