@@ -24,8 +24,7 @@ class HighChartsAsset extends AssetBundle
         'yii\web\JqueryAsset',
     ];
 
-    public function init()
-    {
-        $this->js[] = YII_DEBUG ? 'highcharts.src.js' : 'highcharts.js';
-    }
+    public $js = [
+        'highcharts.src.js',
+    ];
 }
