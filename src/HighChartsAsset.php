@@ -18,14 +18,13 @@ use yii\web\AssetBundle;
  */
 class HighChartsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/highcharts-release/';
+    public $sourcePath = '@bower/highcharts-release/';
 
     public $depends = [
         'yii\web\JqueryAsset',
     ];
 
-    public function init()
-    {
-        $this->js[] = YII_DEBUG ? 'highcharts.src.js' : 'highcharts.js';
-    }
+    public $js = [
+        'highcharts.src.js',
+    ];
 }
