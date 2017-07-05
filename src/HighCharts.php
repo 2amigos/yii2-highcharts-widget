@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright (c) 2013-2015 2amigOS! Consulting Group LLC
+ * @copyright Copyright (c) 2013-2017 2amigOS! Consulting Group LLC
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
@@ -106,7 +106,7 @@ class HighCharts extends Widget
         if ($this->enableMore) {
             $bundle->js[] = YII_DEBUG ? 'highcharts-more.src.js' : 'highcharts-more.js';
         }
-        
+
         foreach ($this->modules as $module) {
             $bundle->js[] = "modules/{$module}";
         }

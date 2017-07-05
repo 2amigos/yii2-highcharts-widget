@@ -23,3 +23,6 @@ nbproject
 # mac deployment helpers
 switch
 index
+
+# php cs fixer
+.php_cs.cache
