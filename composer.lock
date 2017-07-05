@@ -11,12 +11,12 @@
             "version": "v5.0.12",
             "source": {
                 "type": "git",
-                "url": "https://github.com/highcharts/highcharts-dist.git",
+                "url": "https://github.com/highslide-software/highcharts-release.git",
                 "reference": "bd849e327d7a97664e88a98965065a48245e8316"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/highcharts/highcharts-dist/zipball/bd849e327d7a97664e88a98965065a48245e8316",
+                "url": "https://api.github.com/repos/highslide-software/highcharts-release/zipball/bd849e327d7a97664e88a98965065a48245e8316",
                 "reference": "bd849e327d7a97664e88a98965065a48245e8316",
                 "shasum": ""
             },
@@ -61,12 +61,12 @@
             "version": "3.3.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
                 "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/9835731cb78cac749734d94a1cb5bd70da4d3b10",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/9835731cb78cac749734d94a1cb5bd70da4d3b10",
                 "reference": "9835731cb78cac749734d94a1cb5bd70da4d3b10",
                 "shasum": ""
             },
